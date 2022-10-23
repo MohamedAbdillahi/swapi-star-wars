@@ -4,23 +4,24 @@ import {Card, Grid} from 'semantic-ui-react'
 export const Character = ({data}) => {
   return (
     <>
-    <h1>Star wars Characters</h1>
+    <h1>Star war Characters</h1>
     <Grid columns={3} >
       {data.map((people, i) => {
+        const {name, height, mass, hair_color} = people
         return (
           <Grid.Column key={i}>
             <Card>
               <Card.Content>
                 <Card.Header>
-                  {people.name}
+                  {name}
                 </Card.Header>
                 <Card.Description>
                   <strong>height</strong>
-                  <p>{people.height}</p>
+                  <p>{height}</p>
                   <strong>Mass</strong>
-                  <p>{people.mass}</p>
+                  <p>{mass}</p>
                   <strong>hair color</strong>
-                  <p>{people.hair_color}</p>
+                  <p>{hair_color}</p>
                 </Card.Description>
               </Card.Content>
 
